@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { Gamepad2, User, LogOut, Shield, Home, ClipboardList, Award, Settings } from 'lucide-react';
+import { Gamepad2, User, LogOut, Shield, Home, ClipboardList, Award } from 'lucide-react';
 
 const Navbar = () => {
   const { currentUser, isAdmin, logout } = useAuth();

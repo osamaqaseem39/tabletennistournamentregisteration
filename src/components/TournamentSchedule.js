@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import {
   Calendar,
   Clock,
   MapPin,
   Users,
-  Filter,
   Search,
   ChevronDown,
   ChevronUp,
@@ -22,7 +21,7 @@ const TournamentSchedule = () => {
   const [filterDate, setFilterDate] = useState('all');
   const [expandedRounds, setExpandedRounds] = useState(new Set(['round1']));
 
-  const [scheduleData, setScheduleData] = useState({
+  const [scheduleData] = useState({
     tournamentInfo: {
       name: 'Table Tennis Tournament 2024',
       dates: ['2024-12-15', '2024-12-16', '2024-12-17'],

@@ -9,21 +9,16 @@ import {
   Clock, 
   AlertCircle, 
   Search, 
-  Filter,
   Download,
-  Eye,
-  Edit,
   Trophy,
   RefreshCw
 } from 'lucide-react';
-import BracketManager from './BracketManager';
 import { apiCall, API_CONFIG } from '../config/api';
 
 const AdminPortal = () => {
   const { isAdmin } = useAuth();
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('cashback');
-  const [selectedTournament, setSelectedTournament] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [filterStatus, setFilterStatus] = useState('all');
 

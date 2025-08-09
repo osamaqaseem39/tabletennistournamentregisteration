@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { Upload, CheckCircle, AlertCircle, CreditCard, User, Mail, Phone, Calendar, Gift } from 'lucide-react';
+import { Upload, CheckCircle, AlertCircle, User, Mail, Phone, Calendar, Gift } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
-import { apiCall, API_CONFIG } from '../config/api';
+import { apiCall } from '../config/api';
 import BANK_DETAILS from '../config/bankDetails';
 
 const RegistrationForm = () => {

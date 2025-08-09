@@ -11,12 +11,6 @@ const ReferralLink = () => {
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
 
-  useEffect(() => {
-    if (referralCode) {
-      validateReferralCode();
-    }
-  }, [referralCode, validateReferralCode]);
-
   const validateReferralCode = async () => {
     try {
       setLoading(true);
@@ -35,6 +29,12 @@ const ReferralLink = () => {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (referralCode) {
+      validateReferralCode();
+    }
+  }, [referralCode]);
 
   const copyReferralLink = async () => {
     const referralLink = `${window.location.origin}/referral/${referralCode}`;

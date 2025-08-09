@@ -14,7 +14,7 @@ const BracketManager = ({ tournamentId, onBracketGenerated }) => {
   useEffect(() => {
     fetchTournament();
     fetchBracket();
-  }, [tournamentId]);
+  }, [tournamentId, fetchTournament, fetchBracket]);
 
   const fetchTournament = async () => {
     try {

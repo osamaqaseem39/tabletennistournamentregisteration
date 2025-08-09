@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
-import { CheckCircle, Clock, AlertCircle, Copy, Share2, Users, DollarSign, Trophy, Calendar, Loader2 } from 'lucide-react';
+import { CheckCircle, Clock, AlertCircle, Copy, Share2, Users, Trophy, Calendar, Loader2 } from 'lucide-react';
 import { apiCall, API_CONFIG } from '../config/api';
 import { Link } from 'react-router-dom';
 
@@ -24,7 +24,7 @@ const StatusScreen = () => {
     if (currentUser) {
       fetchRegistrationStatus();
     }
-  }, [currentUser]);
+  }, [currentUser, fetchRegistrationStatus]);
 
   const fetchRegistrationStatus = async () => {
     try {
